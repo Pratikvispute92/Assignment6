@@ -1,38 +1,29 @@
-package assignment6;
+package Assignment6;
 
-class TestA {
-    
-    public static void print() {
-        System.out.println("Parent");
-    }
+class A {
+	public static void print() {
+		System.out.println("Parent");
+	}
 }
 
-class B extends TestA {
-    
-    public static void print() {
-        System.out.println("Child");
-    }
+class B extends A {
+	public static void print() {
+		System.out.println("Child");
+	}
 }
 
 public class Test {
-    public static void main(String[] args) {
-       
-        Test objA = new Test();
-        objA.print();  
 
-        
-        B objB = new B();
-        objB.print();  
+	public static void main(String[] args) {
+		A obja = new A();
+		obja.print();
+		System.out.println("==========");
+		B objb = new B();
+		objb.print();
+		System.out.println("==========");
+		obja = new B();
+		obja.print();
 
-        
-        B objAB = new B();
-        objAB.print();  
-    }
-
-	private void print() {
-		// TODO Auto-generated method stub
-		
 	}
 
-	
 }
